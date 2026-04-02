@@ -1,10 +1,10 @@
 # ET Survey Filler 🚀
 
-![Extension UI](screenshot.png)
-
 **ET Survey Filler** is a premium Chrome Extension designed to automate faculty feedback surveys on the ETLAB student portal. It eliminates the tedious task of manually clicking through hundreds of radio buttons by providing an intelligent, one-click automation experience.
 
 ---
+
+![Extension UI](screenshot.png)
 
 ## ✨ Key Features
 
