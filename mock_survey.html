@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock ETLAB Portal - Full Survey</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 40px; background-color: #f5f5f5; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f9fa; }
+        .status-completed { color: #27ae60; font-weight: bold; }
+        .status-pending { color: #e74c3c; font-weight: bold; }
+        .question { margin-bottom: 20px; padding: 15px; border-radius: 5px; background: #fafafa; border-left: 4px solid #3498db; }
+        .question p { font-weight: 600; margin-top: 0; margin-bottom: 10px; }
+        .options { display: flex; flex-wrap: wrap; gap: 15px; }
+        label { display: flex; align-items: center; gap: 5px; cursor: pointer; font-size: 0.95rem; }
+        button, .btn { background: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; font-size: 0.9rem; font-weight: 600; transition: background 0.3s; }
+        button:hover, .btn:hover { background: #2980b9; }
+        .hidden { display: none; }
+        .section-header { background: #f0f7fd; padding: 10px; margin: 20px 0 10px 0; border-radius: 4px; font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- List View -->
+        <div id="listView">
+            <h1>Teacher Evaluation</h1>
+            <p>Select a teacher to provide feedback for the semester.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Subject</th>
+                        <th>Teacher</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>CST 302 - Compiler Design</td>
+                        <td>MUMTHAS O Y</td>
+                        <td><span class="status-completed">Completed</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>CSD 334 - Mini Project</td>
+                        <td>MUMTHAS O Y</td>
+                        <td><span class="status-pending">Not Completed</span></td>
+                        <td><button class="answer-btn">Answer Questions</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CST 304 - Computer Graphics</td>
+                        <td>LIJI L. DOMINIC</td>
+                        <td><span class="status-pending">Not Completed</span></td>
+                        <td><button class="answer-btn">Answer Questions</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Survey View -->
+        <div id="surveyView" class="hidden">
+            <h1 id="surveyTitle">Feedback for: [Teacher Name]</h1>
+            
+            <div class="section-header">Section 1</div>
+
+            <div class="question">
+                <p>1. Subject Knowledge</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="1"> Excellent</label>
+                    <label><input type="radio" name="q1" value="2"> Good</label>
+                    <label><input type="radio" name="q1" value="3"> Fair</label>
+                    <label><input type="radio" name="q1" value="4"> Poor</label>
+                    <label><input type="radio" name="q1" value="5"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Clarity and Understanding of teachers Explanations</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="1"> Excellent</label>
+                    <label><input type="radio" name="q2" value="2"> Good</label>
+                    <label><input type="radio" name="q2" value="3"> Fair</label>
+                    <label><input type="radio" name="q2" value="4"> Poor</label>
+                    <label><input type="radio" name="q2" value="5"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. Teachers Willingness to Help</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="1"> Excellent</label>
+                    <label><input type="radio" name="q3" value="2"> Good</label>
+                    <label><input type="radio" name="q3" value="3"> Fair</label>
+                    <label><input type="radio" name="q3" value="4"> Poor</label>
+                    <label><input type="radio" name="q3" value="5"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Approximate % of classes NOT engaged by the teachers</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="1"> Less than 10</label>
+                    <label><input type="radio" name="q4" value="2"> 10 to 25</label>
+                    <label><input type="radio" name="q4" value="3"> More than 25</label>
+                    <label><input type="radio" name="q4" value="4"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Whether the teachers dictates notes only</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="1"> No</label>
+                    <label><input type="radio" name="q5" value="2"> Yes</label>
+                    <label><input type="radio" name="q5" value="3"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="section-header">Section 2</div>
+
+            <div class="question">
+                <p>1. Teachers ability to organize lecture</p>
+                <div class="options">
+                    <label><input type="radio" name="s2q1" value="1"> Excellent</label>
+                    <label><input type="radio" name="s2q1" value="2"> Satisfactory</label>
+                    <label><input type="radio" name="s2q1" value="3"> Inadequate</label>
+                    <label><input type="radio" name="s2q1" value="4"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Speed of presentation</p>
+                <div class="options">
+                    <label><input type="radio" name="s2q2" value="1"> Just Right</label>
+                    <label><input type="radio" name="s2q2" value="2"> Too Fast</label>
+                    <label><input type="radio" name="s2q2" value="3"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. Does the teacher encourage questioning</p>
+                <div class="options">
+                    <label><input type="radio" name="s2q3" value="1"> Yes</label>
+                    <label><input type="radio" name="s2q3" value="2"> Some Times</label>
+                    <label><input type="radio" name="s2q3" value="3"> No</label>
+                    <label><input type="radio" name="s2q3" value="4"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Behavior of the teacher</p>
+                <div class="options">
+                    <label><input type="radio" name="s2q4" value="1"> Pleasant</label>
+                    <label><input type="radio" name="s2q4" value="2"> Indifferent</label>
+                    <label><input type="radio" name="s2q4" value="3"> Unpleasant</label>
+                    <label><input type="radio" name="s2q4" value="4"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Sincerity of the teacher</p>
+                <div class="options">
+                    <label><input type="radio" name="s2q5" value="1"> Sincere</label>
+                    <label><input type="radio" name="s2q5" value="2"> Not Sincere</label>
+                    <label><input type="radio" name="s2q5" value="3"> Unable to Judge</label>
+                    <label><input type="radio" name="s2q5" value="4"> Blank</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. Overall Teaching effectiveness</p>
+                <div class="options">
+                    <label><input type="radio" name="s2q6" value="1"> Excellent</label>
+                    <label><input type="radio" name="s2q6" value="2"> Good</label>
+                    <label><input type="radio" name="s2q6" value="3"> Fair</label>
+                    <label><input type="radio" name="s2q6" value="4"> Poor</label>
+                    <label><input type="radio" name="s2q6" value="5"> Can't Judge</label>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; display: flex; gap: 15px;">
+                <button type="submit" id="submitBtn">Submit Feedback</button>
+                <button type="button" id="backBtn" style="background: #95a5a6;">Back to List</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const listView = document.getElementById('listView');
+        const surveyView = document.getElementById('surveyView');
+        const surveyTitle = document.getElementById('surveyTitle');
+        let currentTeacherRow = null;
+
+        document.querySelectorAll('.answer-btn').forEach(btn => {
+            btn.onclick = (e) => {
+                currentTeacherRow = e.target.closest('tr');
+                const teacherName = currentTeacherRow.cells[2].innerText;
+                surveyTitle.innerText = "Feedback for: " + teacherName;
+                listView.classList.add('hidden');
+                surveyView.classList.remove('hidden');
+            };
+        });
+
+        document.getElementById('submitBtn').onclick = (e) => {
+            e.preventDefault();
+            // Update status in the list
+            if (currentTeacherRow) {
+                const statusCell = currentTeacherRow.cells[3];
+                statusCell.innerHTML = '<span class="status-completed">Completed</span>';
+                currentTeacherRow.cells[4].innerText = '-';
+            }
+            // Go back to list
+            listView.classList.remove('hidden');
+            surveyView.classList.add('hidden');
+            
+            // Clear radio buttons for next one
+            document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+
+            // Notify background that we might need to continue bulk (trigger a DOM change)
+            const dummy = document.createElement('div');
+            document.body.appendChild(dummy);
+            setTimeout(() => dummy.remove(), 100);
+        };
+
+        document.getElementById('backBtn').onclick = () => {
+            listView.classList.remove('hidden');
+            surveyView.classList.add('hidden');
+        };
+    </script>
+</body>
+</html>

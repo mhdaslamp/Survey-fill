@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ET Survey Filler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ET Survey Filler</h1>
+
+        <div class="mode-tabs">
+            <div id="tabSingle" class="tab active">Single</div>
+            <div id="tabBulk" class="tab">Bulk</div>
+        </div>
+
+        <div id="sectionSingle" class="mode-section">
+            <p class="subtitle">Quickly fill the current survey</p>
+            <div class="actions">
+                <button id="fillExcellent" class="btn btn-primary">Excellent All</button>
+                <button id="fillGood" class="btn btn-secondary">Good All</button>
+                <button id="fillFair" class="btn btn-warning">Fair All</button>
+                <button id="fillPoor" class="btn btn-danger">Poor All</button>
+                <button id="fillCantJudge" class="btn btn-info">Can't Judge All</button>
+            </div>
+            <button id="submitSurvey" class="btn btn-success" style="margin-top: 15px; width: 100%;">Submit
+                Form</button>
+        </div>
+
+        <div id="sectionBulk" class="mode-section hidden">
+            <p class="subtitle">Process entire list automatically</p>
+            <div class="bulk-controls">
+                <select id="bulkRating">
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Poor">Poor</option>
+                    <option value="CantJudge">Can't Judge</option>
+                </select>
+                <button id="startBulk" class="btn btn-primary">Start</button>
+            </div>
+            <button id="stopBulk" class="btn btn-danger" style="display:none; width: 100%; margin-top: 10px;">Stop
+                Auto-Fill</button>
+        </div>
+
+        <div class="footer">
+            <div id="status" class="status">Ready</div>
+            <div class="contact">
+                <p>Automation powered by pure laziness</p>
+                <a href="https://mhdaslam.me/" target="_blank">Contact Developer</a> <br>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+/* styles.css */
+:root {
+    --brand-primary: #7662dd;
+    --brand-dark: #2a3c55;
+    --bg-dark: #121212;
+    --bg-surface: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #333333;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    text-align: center;
+    color: var(--brand-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mode-tabs {
+    display: flex;
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    color: var(--text-secondary);
+}
+
+.tab.active {
+    background-color: var(--brand-primary);
+    color: white;
+}
+
+.tab:not(.active):hover {
+    background-color: #2a2a2a;
+    color: var(--text-primary);
+}
+
+.mode-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn {
+    padding: 12px;
+    border: 1px solid var(--brand-primary);
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text-primary);
+}
+
+.btn:hover {
+    background-color: rgba(118, 98, 221, 0.1);
+}
+
+/* Active/Selected state for any button */
+.btn.selected {
+    background-color: var(--brand-primary);
+    color: white;
+}
+
+.btn-danger {
+    border-color: var(--brand-primary);
+    color: var(--text-primary);
+}
+
+.btn-danger:hover {
+    background-color: rgba(118, 98, 221, 0.1);
+}
+
+.btn-success {
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+
+.btn-success:hover {
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+.btn-outline {
+    background: none;
+    border: 1px solid #444;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.bulk-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+#bulkRating {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 6px;
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.status {
+    font-size: 0.8rem;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+}
+
+.contact {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.contact a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none !important;
+}
